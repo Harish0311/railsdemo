@@ -1,0 +1,8 @@
+<div class= "container-admin">
+    <br><h2>Get Verified</h2><br>
+<%= form_with model: @user, url:confirmations_path do |form|%>
+<%= form.email_field :email, required=true,class: "form-control"%>
+ <div class="d-grid gap-2">
+  <%= form.submit "Sign Up", class: "btn btn-primary" %>
+  </div>
+</div>
