@@ -7,7 +7,7 @@ class User < ApplicationRecord
   before_save :downcase_email
 
   private
-
+  x
   def downcase_email
     self.email = email.downcase
   end
