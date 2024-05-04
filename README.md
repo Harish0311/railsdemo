@@ -16,22 +16,15 @@ rails db:migrate
 rails server
 ```
 
-Visit ```http://127.0.0.1:3000/``` to view the site 
+Visit ```http://127.0.0.1:3000/``` to view the site
 
-* Ruby version
+## Screenshots 🖼️
 
-* System dependencies
+![Signup](/screenshots/Signup.png)
 
-* Configuration
 
-* Database creation
+![Homepage](/screenshots/Homepage.png)
 
-* Database initialization
+![Add Products](/screenshots/Create.png)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Edit Products](/screenshots/Edit.png)
