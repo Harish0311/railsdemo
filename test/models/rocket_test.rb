@@ -8,10 +8,6 @@ class RocketTest < ActiveSupport::TestCase
     @rocket = rockets(:one)
   end
 
-  test "the truth" do
-    assert true
-  end
-
   test "name required" do
     @rocket.Name = ""
     assert_not @rocket.save

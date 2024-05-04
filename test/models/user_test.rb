@@ -2,12 +2,10 @@ require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
   fixtures :users
+
   def setup
     @user = users(:one) # Load the fixture data for user 'one'
     @user.password = "password"
-  end
-  test "the truth" do
-    assert true
   end
 
   test "valid user should be valid" do
@@ -36,9 +34,6 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_equal mixed_case_email.downcase, @user.reload.email
   end
-
-
-
 
 end
 
