@@ -8,6 +8,8 @@ class UserTest < ActiveSupport::TestCase
     @user.password = "password"
   end
 
+
+
   test "valid user should be valid" do
     assert @user.valid?, @user.errors.full_messages.join(", ")
   end
@@ -33,6 +35,17 @@ class UserTest < ActiveSupport::TestCase
     @user.email = mixed_case_email
     @user.save
     assert_equal mixed_case_email.downcase, @user.reload.email
+  end
+
+  test "should be saved in downcase" do
+    mixed_case_email = "Foo@ExAMPle.CoM"
+    @user.email = mixed_case_email
+    @user.save
+    assert_equal mixed_case_email.downcase, @user.reload.email
+  end
+
+  def teardown
+    User.destroy_all
   end
 
 end

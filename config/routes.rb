@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/auth/signup", to: "auth#get_signup", as: "signup"
   post "/auth/signup", to: "auth#post_signup"
   get "/auth/login", to: "auth#get_login" , as: "login"
-  post "/auth/login", to: "auth#post_login"
+  post "/auth/login", to: "auth#post_login", as: "test"
   post "/auth/logout", to: "auth#post_logout", as: "logout"
 
   get '/admin/create', to: "admin#create", as: "create"

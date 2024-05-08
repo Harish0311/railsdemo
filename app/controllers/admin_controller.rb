@@ -7,7 +7,7 @@ AdminController < ApplicationController
     @rocket = Rocket.new
   end
 
-  def post_create()
+  def post_create
     @rocket = Rocket.new(form_params)
     if @rocket.save
       redirect_to root_path, notice: "Rocket was successfully created."

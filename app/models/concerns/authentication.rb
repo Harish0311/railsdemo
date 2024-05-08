@@ -3,7 +3,6 @@ module Authentication
   extend ActiveSupport::Concern
 
   included do
-    before_action :current_user
     helper_method :current_user
     helper_method :user_signed_in?
   end
@@ -17,7 +16,7 @@ module Authentication
     reset_session
   end
 
-  def redirect_if_authenticated
+  def redirect_if_authentica ted
     redirect_to root_path, alert: "You are already logged in." if user_signed_in?
   end
 
