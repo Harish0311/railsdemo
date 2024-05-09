@@ -13,6 +13,11 @@ module ActiveSupport
     # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
     fixtures :all
 
+    def sign_in
+      @user = users(:one)
+      @user.password = "password"
+      session[:current_user_id] = @user.id
+    end
 
     # Add more helper methods to be used by all tests here...
   end
